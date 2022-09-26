@@ -1,0 +1,10 @@
+type Blog = 
+ record {
+   content: text;
+   title: text;
+   writer: text;
+ };
+service : {
+  createBlog: (text, text, text) -> () oneway;
+  readBlogs: () -> (vec Blog) query;
+}
